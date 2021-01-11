@@ -1,10 +1,9 @@
 <template>
-  <div>
-    <public-header>
-      <div slot="title" class="mc-bold mc-size20">首页</div>
-    </public-header>
-    首页
-    </div>
+  <div class='header white-bg mc-flex'>
+    <div class="header-l"></div>
+    <div class="header-c"></div>
+    <div class="header-l"></div>
+  </div>
 </template>
 
 <script>

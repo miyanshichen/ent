@@ -1,10 +1,11 @@
 <template>
-  <div>
-    <public-header>
-      <div slot="title" class="mc-bold mc-size20">首页</div>
-    </public-header>
-    首页
+  <div class='header white-bg mc-flex'>
+    <div class="header-l">
+      <span class="el-icon-arrow-left"></span>
     </div>
+    <div class="header-c"></div>
+    <div class="header-r"></div>
+  </div>
 </template>
 
 <script>

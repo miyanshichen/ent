@@ -3,8 +3,6 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import "./assets/css/style.css"
-import "./assets/font/iconfont.js"
-import "./assets/font/iconfont.css"
 import './plugins/element.js'
 import public_component from './components/index.js'
 

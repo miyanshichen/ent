@@ -1,0 +1,30 @@
+{
+  "id": "2321157",
+  "name": "ent",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4770756",
+      "name": "右箭头",
+      "font_class": "youjiantou",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "4770758",
+      "name": "左箭头",
+      "font_class": "zuojiantou",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "10333707",
+      "name": "菜单",
+      "font_class": "caidan",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    }
+  ]
+}
