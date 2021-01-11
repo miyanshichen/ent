@@ -11,7 +11,7 @@
       <div class="header-r mc-flex-1"></div>
     </div>
     <el-drawer :visible.sync="drawer" direction="ltr" :show-close="false">
-      <div slot="title">个人个人个人个人个人个人个人个人个人</div>
+      <div slot="title"></div>
       <span>我来啦!</span>
     </el-drawer>
   </div>
@@ -60,8 +60,5 @@ export default {
   .header-container {
     width: 70%;
   }
-}
-/deep/.el-drawer{
-  width: 300px !important;
 }
 </style>

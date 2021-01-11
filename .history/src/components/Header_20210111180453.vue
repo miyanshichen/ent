@@ -61,7 +61,5 @@ export default {
     width: 70%;
   }
 }
-/deep/.el-drawer{
-  width: 300px !important;
-}
+/deep/
 </style>

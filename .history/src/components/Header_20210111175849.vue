@@ -3,17 +3,19 @@
     <div class="header-container mc-flex mc-items-center mc-h-100 main-text">
       <div class="header-l mc-size20 mc-bold mc-flex-1">
         <span class="iconfont icon-zuojiantou mc-mr-15"></span>
-        <span class="iconfont icon-caidan" @click="drawer = true"></span>
+        <span class="iconfont icon-caidan"></span>
       </div>
-      <div class="header-c mc-flex-1 mc-text-center">
-        <slot name="title"></slot>
-      </div>
+      <div class="header-c mc-flex-1 mc-text-center" ><slot name="title"></slot></div>
       <div class="header-r mc-flex-1"></div>
     </div>
-    <el-drawer :visible.sync="drawer" direction="ltr" :show-close="false">
-      <div slot="title">个人个人个人个人个人个人个人个人个人</div>
-      <span>我来啦!</span>
-    </el-drawer>
+    <el-drawer
+  title="我是标题"
+  :visible.sync="drawer"
+  :direction="direction"
+  :before-close="handleClose">
+  <span>我来啦!</span>
+</el-drawer>
+
   </div>
 </template>
 
@@ -21,7 +23,7 @@
 export default {
   data() {
     return {
-      drawer: false,
+      drawer: false
     };
   },
 
@@ -46,22 +48,19 @@ export default {
     height: 56px;
   }
 }
-.header-container {
+.header-container{
   max-width: 1200px;
   width: 90%;
   margin: 0 auto;
 }
 @media only screen and (min-width: 601px) {
-  .header-container {
+  .header-container{
     width: 85%;
   }
 }
 @media only screen and (min-width: 993px) {
-  .header-container {
+  .header-container{
     width: 70%;
   }
-}
-/deep/.el-drawer{
-  width: 300px !important;
 }
 </style>

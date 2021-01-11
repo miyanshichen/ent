@@ -3,15 +3,14 @@
     <div class="header-container mc-flex mc-items-center mc-h-100 main-text">
       <div class="header-l mc-size20 mc-bold mc-flex-1">
         <span class="iconfont icon-zuojiantou mc-mr-15"></span>
-        <span class="iconfont icon-caidan" @click="drawer = true"></span>
+        <span class="iconfont icon-caidan"></span>
       </div>
       <div class="header-c mc-flex-1 mc-text-center">
         <slot name="title"></slot>
       </div>
       <div class="header-r mc-flex-1"></div>
     </div>
-    <el-drawer :visible.sync="drawer" direction="ltr" :show-close="false">
-      <div slot="title">个人个人个人个人个人个人个人个人个人</div>
+    <el-drawer title="我是标题" :visible.sync="drawer" direction="ttb">
       <span>我来啦!</span>
     </el-drawer>
   </div>
@@ -60,8 +59,5 @@ export default {
   .header-container {
     width: 70%;
   }
-}
-/deep/.el-drawer{
-  width: 300px !important;
 }
 </style>
