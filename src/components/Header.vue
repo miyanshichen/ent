@@ -11,8 +11,13 @@
       <div class="header-r mc-flex-1"></div>
     </div>
     <el-drawer :visible.sync="drawer" direction="ltr" :show-close="false">
-      <div slot="title">个人个人个人个人个人个人个人个人个人</div>
-      <span>我来啦!</span>
+      <div slot="title">
+        <div class="user-view mc-flex mc-items-center">
+          <el-avatar :size="50" :src="require('@/assets/image/avator.png')"></el-avatar>
+          <span class="mc-size18 mc-bold mc-ml-15">迷眼世尘</span>
+        </div>
+      </div>
+      
     </el-drawer>
   </div>
 </template>
@@ -21,7 +26,7 @@
 export default {
   data() {
     return {
-      drawer: false,
+      drawer: true,
     };
   },
 
