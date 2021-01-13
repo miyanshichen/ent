@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "6834864",
+      "name": "操作-记录",
+      "font_class": "cz-jl",
+      "unicode": "e772",
+      "unicode_decimal": 59250
+    },
+    {
+      "icon_id": "8235909",
+      "name": "Icon - 转出",
+      "font_class": "Icon-zhuanchu",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "8235910",
+      "name": "Icon - 转入",
+      "font_class": "Icon-zhuanru",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
       "icon_id": "1504141",
       "name": "团队",
       "font_class": "tuandui",
