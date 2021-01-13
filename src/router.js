@@ -35,5 +35,21 @@ export default new Router({
         authToken: false
       }
     },
+    {
+      path: '/findPsd',
+      name: 'FindPsd',
+      component: () => import('./views/login/findPsd.vue'),
+      meta: {
+        authToken: false
+      }
+    },
+    {
+      path: '/personal/index',
+      name: 'Personal',
+      component: () => import('./views/personal/index.vue'),
+      meta: {
+        authToken: true
+      }
+    },
   ]
 })

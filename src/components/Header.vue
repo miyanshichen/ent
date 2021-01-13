@@ -5,10 +5,10 @@
         <span class="iconfont icon-zuojiantou mc-mr-15"></span>
         <span class="iconfont icon-caidan" @click="drawer = true"></span>
       </div>
-      <div class="header-c mc-flex-1 mc-text-center" >{{headerText}}
+      <div class="header-c mc-flex-1 mc-text-center">{{headerText}}
         <!-- <slot name="title"></slot> -->
       </div>
-      <div class="header-r mc-flex-1"></div>
+      <div class="header-r mc-flex-1 mc-text-right"><slot name="header-r"></slot></div>
     </div>
     <el-drawer :visible.sync="drawer" direction="ltr" :show-close="false">
       <div slot="title">
@@ -18,9 +18,24 @@
         </div>
       </div>
       <div class="nav-wrap">
-        <router-link  to="" v-for="(item, index) in 5" :key="index">
-          <span class="el-icon-edit"></span>
-          <span class="nav-text">首页</span>
+        <router-link  to="/">
+          <span class="iconfont icon-shouye mc-size20"></span>
+          <span class="nav-text mc-bold">首页</span>
+          <span class="iconfont icon-youjiantou"></span>
+        </router-link>
+        <router-link  to="/">
+          <span class="iconfont icon-wodezichan mc-size20"></span>
+          <span class="nav-text mc-bold">我的资产</span>
+          <span class="iconfont icon-youjiantou"></span>
+        </router-link>
+        <router-link  to="/">
+          <span class="iconfont icon-tuandui mc-size20"></span>
+          <span class="nav-text mc-bold">我的团队</span>
+          <span class="iconfont icon-youjiantou"></span>
+        </router-link>
+        <router-link  to="/personal/index">
+          <span class="iconfont icon-gerenzhongxin mc-size20"></span>
+          <span class="nav-text mc-bold">个人中心</span>
           <span class="iconfont icon-youjiantou"></span>
         </router-link>
       </div>
@@ -38,7 +53,7 @@ export default {
   },
   data() {
     return {
-      drawer: true,
+      drawer: false,
     };
   },
 
@@ -74,7 +89,6 @@ export default {
       height: 48px;
       line-height: 48px;
       color: @main;
-      font-weight: bold;
       transition: all linear .2s;
       &:hover{
         background: @f5;

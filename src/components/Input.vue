@@ -1,9 +1,11 @@
 <template>
   <div class="mc-input">
     <div class="input-label" :class="labelSwitch || value !== '' ? 'active' : ''">{{title}}</div>
-    <el-input v-model="value" @focus="inputFocus()" @blur="inputBlur()" v-if="type === 'text'"></el-input>
+    <el-input v-model="value" @focus="inputFocus()" @blur="inputBlur()" v-if="type === 'text'">
+      <span slot="suffix" class="main-text mc-cursor-default" v-if="code">获取验证码</span>
+    </el-input>
     <el-input v-model="value" :type="passSwitch ? 'text' : 'password'" @focus="inputFocus()" @blur="inputBlur()" v-if="type === 'password'">
-      <span slot="suffix" class="mc-size24 iconfont mc-mt-5 mc-display-in-block main-text" :class="passSwitch ? 'icon-yanjing_xianshi_o': 'icon-yanjing_yincang_o'" @click="passSwitch = !passSwitch"></span>
+      <span slot="suffix" class="eye mc-size24 iconfont mc-mt-5 mc-display-in-block main-text" :class="passSwitch ? 'icon-yanjing_xianshi_o': 'icon-yanjing_yincang_o'" @click="passSwitch = !passSwitch"></span>
     </el-input>
   </div>
 </template>
@@ -17,6 +19,10 @@ export default {
     title: {},
     type: {
       default: 'text'
+    },
+    code: {
+      type: Boolean,
+      default: false
     }
   },
   data () {

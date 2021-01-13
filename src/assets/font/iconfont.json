@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1504141",
+      "name": "团队",
+      "font_class": "tuandui",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "4294079",
+      "name": "个人中心",
+      "font_class": "gerenzhongxin",
+      "unicode": "e789",
+      "unicode_decimal": 59273
+    },
+    {
+      "icon_id": "8300835",
+      "name": "我的资产",
+      "font_class": "wodezichan",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "14435324",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
       "icon_id": "5388069",
       "name": "眼睛_显示_o",
       "font_class": "yanjing_xianshi_o",
