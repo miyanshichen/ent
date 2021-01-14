@@ -28,6 +28,11 @@
           <span class="nav-text mc-bold">我的资产</span>
           <span class="iconfont icon-youjiantou"></span>
         </router-link>
+        <router-link  to="/finance/trans">
+          <span class="iconfont icon-zhuanhuan-transformation mc-size20"></span>
+          <span class="nav-text mc-bold">互转</span>
+          <span class="iconfont icon-youjiantou"></span>
+        </router-link>
         <router-link  to="/">
           <span class="iconfont icon-tuandui mc-size20"></span>
           <span class="nav-text mc-bold">我的团队</span>

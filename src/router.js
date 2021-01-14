@@ -91,5 +91,13 @@ export default new Router({
         authToken: true
       }
     },
+    {
+      path: '/finance/trans',
+      name: 'Trans',
+      component: () => import('./views/assets/trans.vue'),
+      meta: {
+        authToken: true
+      }
+    },
   ]
 })
