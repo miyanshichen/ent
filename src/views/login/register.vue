@@ -119,13 +119,13 @@ export default {
 .login {
   width: 100vw;
   height: 100vh;
-  background: url('~@/assets/image/login-bg.png') center center no-repeat;
+  background: url('~@/assets/image/login-bg.png') 100% center no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   .form-box {
     width: calc(90% - 30px);
-    max-width: 500px;
+    max-width: 450px;
     padding: 15px;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.5);

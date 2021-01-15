@@ -54,7 +54,7 @@ export default {
   align-items: center;
   .form-box {
     width: calc(90% - 30px);
-    max-width: 500px;
+    max-width: 450px;
     padding: 15px;
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.5);
