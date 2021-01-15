@@ -19,5 +19,9 @@ module.exports = {
       }
     }, // 设置代理
     before: app => { }
+  },
+  build: {
+    // Template for index.html
+    index: path.resolve(__dirname, '../ent/index.html'),
   }
 }

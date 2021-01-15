@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-  publicPath: './',
+  publicPath: '/',
   outputDir: 'ent',
   devServer: {
     host: '0.0.0.0',
@@ -19,5 +19,9 @@ module.exports = {
       }
     }, // 设置代理
     before: app => { }
+  },
+  build: {
+    // Template for index.html
+    index: path.resolve(__dirname, '../ent/index.html'),
   }
 }
