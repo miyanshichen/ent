@@ -53,9 +53,9 @@ service.interceptors.request.use(function (config) {
 service.interceptors.response.use(function (response) {
   tryHideFullScreenLoading();
   let data = response.data
-  if (data.code) {
+  if (data.status === 2) {
       ElementUI.Message({
-        message: data.msg,
+        message: data.message,
         type: 'error'
       })
   }

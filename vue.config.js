@@ -8,8 +8,7 @@ module.exports = {
     hotOnly: false,
     proxy: {
       '/api': {
-        // target: 'http://18.224.107.55:8087',//设置你调用的接口域名和端口号 别忘了加http https://www.vtonex.com/api
-        target: 'http://ec2-18-232-188-25.compute-1.amazonaws.com:8112/api',//设置你调用的接口域名和端口号 别忘了加http https://www.vtonex.com/api
+        target: 'http://ec2-18-232-188-25.compute-1.amazonaws.com:8112/',
         changeOrigin: true,//如果需要跨域  
         pathRewrite: {
           // '^/api': 'http://18.224.107.55:8087/api',//调用接口直接写‘/api/user/add’即可
