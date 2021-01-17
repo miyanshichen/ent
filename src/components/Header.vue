@@ -30,7 +30,7 @@
         </router-link>
         <router-link  to="/finance/trans">
           <span class="iconfont icon-zhuanhuan-transformation mc-size20"></span>
-          <span class="nav-text mc-bold">互转</span>
+          <span class="nav-text mc-bold">购买ENT</span>
           <span class="iconfont icon-youjiantou"></span>
         </router-link>
         <router-link  to="/team">

@@ -107,7 +107,7 @@
         ></el-form-item>
       </el-form>
       <div class="mc-flex mc-mt-20">
-        <el-button type="info" class="mc-flex-1 mc-mr-20">取消</el-button>
+        <el-button type="info" class="mc-flex-1 mc-mr-20" @click="psdDialog = false">取消</el-button>
         <el-button type="primary" class="mc-flex-1" @click="psdSub()"
           >提交</el-button
         >
@@ -143,7 +143,7 @@
       </el-form>
 
       <div class="mc-flex mc-mt-20">
-        <el-button type="info" class="mc-flex-1 mc-mr-20">取消</el-button>
+        <el-button type="info" class="mc-flex-1 mc-mr-20" @click="tradeDialog = false">取消</el-button>
         <el-button type="primary" class="mc-flex-1" @click="tradeSub()"
           >提交</el-button
         >
@@ -151,11 +151,11 @@
     </el-dialog>
     <el-dialog :visible.sync="langDialog" title="语言设置">
       <div>
-        <el-radio v-model="lang" label="1">备选项</el-radio>
-        <el-radio v-model="lang" label="2">备选项</el-radio>
+        <el-radio v-model="lang" label="zh-cn">中文</el-radio>
+        <el-radio v-model="lang" label="en">English</el-radio>
       </div>
       <div class="mc-flex mc-mt-20">
-        <el-button type="info" class="mc-flex-1 mc-mr-20">取消</el-button>
+        <el-button type="info" class="mc-flex-1 mc-mr-20" @click="langDialog = false">取消</el-button>
         <el-button type="primary" class="mc-flex-1">提交</el-button>
       </div>
     </el-dialog>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <public-header>
+    <public-header headerText="充币">
       <router-link
         slot="header-r"
         to="/finance/deposit/logs"
@@ -16,12 +16,7 @@
           <div class="address mc-text-center">
             <div class="mc-mtb-15">充币地址</div>
             <div>{{ address }}</div>
-            <el-button
-              class="copy mc-prl-20 mc-mt-20"
-              size="mini"
-              @click="copyLink(address)"
-              >复制</el-button
-            >
+            <el-button class="copy mc-prl-20 mc-mt-20" size="mini" @click="copyLink(address)">复制</el-button>
           </div>
         </div>
       </div>
@@ -32,25 +27,14 @@
           <div class="grid-content bg-purple hidden-xs-only">
             <div class="logs-title mc-flex mc-flex-justify-between mc-prl-15">
               <span>充币记录</span>
-              <router-link
-                to="/finance/deposit/logs"
-                class="gray3-text mc-size12"
-                >查看更多></router-link
-              >
+              <router-link to="/finance/deposit/logs" class="gray3-text mc-size12">查看更多></router-link>
             </div>
             <el-table :data="logsData" stripe>
-              <el-table-column
-                label="充币地址"
-                prop="address"
-              ></el-table-column>
+              <el-table-column label="充币地址" prop="address"></el-table-column>
               <el-table-column label="充币数量" prop="number"></el-table-column>
               <el-table-column label="txid" prop="txid"></el-table-column>
               <el-table-column label="状态" prop="status_name"></el-table-column>
-              <el-table-column
-                label="时间"
-                prop="created_at"
-                align="right"
-              ></el-table-column>
+              <el-table-column label="时间" prop="created_at" align="right"></el-table-column>
             </el-table>
           </div>
         </el-col>
@@ -67,7 +51,7 @@ export default {
     return {
       address: "",
       qrcode: "",
-      logsData: [],
+      logsData: []
     };
   },
 
@@ -78,15 +62,19 @@ export default {
   mounted() {
     this.coinInfo();
     this.getLogs();
-    this.bindQRCode();
   },
 
   methods: {
     async coinInfo() {
       await this.$axios
         .get(this.$https.api + "/coin/lists?type=1&name=USDT")
-        .then((res) => {
-          console.log(res);
+        .then(res => {
+          if (res.status === 1) {
+            this.address = res.data[0].address;
+            this.bindQRCode();
+          } else {
+            this.address = "";
+          }
         });
     },
     async getLogs() {
@@ -94,7 +82,7 @@ export default {
         .get(
           this.$https.api + "/coin/record?type=1&page=1&page_size=10&coin_id=1"
         )
-        .then((res) => {
+        .then(res => {
           if (res.status === 1) {
             this.logsData = res.data;
           } else {
@@ -113,20 +101,20 @@ export default {
           height: 120,
           colorDark: "#333333", //二维码颜色
           colorLight: "#ffffff", //二维码背景色
-          correctLevel: QRCode.CorrectLevel.L, //容错率，L/M/H
+          correctLevel: QRCode.CorrectLevel.L //容错率，L/M/H
         });
       }
     },
     copyLink(data) {
       let clipboard = new Clipboard(".copy", {
-        text: function () {
+        text: function() {
           return data;
-        },
+        }
       });
       clipboard.on("success", () => {
         this.$message({
           message: "复制成功",
-          type: "success",
+          type: "success"
         });
         // 释放内存
         clipboard.destroy();
@@ -134,12 +122,12 @@ export default {
       clipboard.on("error", () => {
         this.$message({
           message: "复制失败",
-          type: "error",
+          type: "error"
         });
         clipboard.destroy();
       });
-    },
-  },
+    }
+  }
 };
 </script>
 <style lang='less' scoped>

@@ -14,7 +14,7 @@
         ></el-table-column>
       </el-table>
       <div class="mc-flex mc-flex-justify-end mc-pb-20">
-        <el-pagination :pager-count="5" background layout="prev, pager, next" :total="1000">
+        <el-pagination :pager-count="5" @current-change="pageChange" background layout="prev, pager, next" :total="1000">
         </el-pagination>
       </div>
     </div>
@@ -25,22 +25,13 @@
 export default {
   data() {
     return {
-      logsData: [
-        {
-          address: "sdfsdfsdf",
-          number: 123123,
-          txid: "q23423423423sdfsdfds",
-          statusName: "成功",
-          time: "2012-12-12 00:00:00",
-        },
-        {
-          address: "sdfsdfsdf",
-          number: 123123,
-          txid: "q23423423423sdfsdfds",
-          statusName: "成功",
-          time: "2012-12-12 00:00:00",
-        },
-      ],
+      logsData: [],
+      form: {
+        type: 1,
+        page: 1,
+        page_size: 10,
+        coin_id: 1
+      }
     };
   },
 
@@ -48,9 +39,25 @@ export default {
 
   computed: {},
 
-  mounted() {},
+  mounted() {
+    this.getLogs();
+  },
 
-  methods: {},
+  methods: {
+    async getLogs() {
+      await this.$axios.get(`${this.$https.api}/coin/record?type=${this.form.type}&page=${this.form.page}&page_size=${this.form.page_size}&coin_id=${this.form.coin_id}`).then(res => {
+        if (res.status === 1) {
+          this.logsData = res.data;
+        } else {
+          this.logsData = [];
+        }
+      })
+    },
+    pageChange(page) {
+      this.form.page = page;
+      this.getLogs();
+    }
+  },
 };
 </script>
 <style lang='less' scoped>

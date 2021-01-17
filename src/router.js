@@ -4,8 +4,8 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
+  // mode: 'history',
+  // base: process.env.BASE_URL,
   routes: [
     {
       path: '/',
@@ -111,6 +111,14 @@ export default new Router({
       path: '/team',
       name: 'Team',
       component: () => import('./views/team/team.vue'),
+      meta: {
+        authToken: true
+      }
+    },
+    {
+      path: '/news/details',
+      name: 'NewsDetails',
+      component: () => import('./views/news/details.vue'),
       meta: {
         authToken: true
       }

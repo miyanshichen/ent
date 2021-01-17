@@ -3,11 +3,11 @@
     <public-header headerText="ENT记录"></public-header>
     <div class="container white-bg">
       <el-table :data="logsData" stripe class="mc-mtb-20">
+        <el-table-column label="币种" prop="coin"></el-table-column>
+        <el-table-column label="买入币种" prop="to_coin"></el-table-column>
         <el-table-column label="买入量" prop="number"></el-table-column>
-        <el-table-column label="买入价" prop="price"></el-table-column>
-        <el-table-column label="交易额" prop="address"></el-table-column>
-        <el-table-column label="实到数量" prop="id"></el-table-column>
-        <el-table-column label="状态" prop="status"></el-table-column>
+        <!-- <el-table-column label="交易额" prop="address"></el-table-column> -->
+        <!-- <el-table-column label="状态" prop="status"></el-table-column> -->
         <el-table-column
           label="时间"
           prop="created_at"
@@ -31,16 +31,7 @@
 export default {
   data() {
     return {
-      logsData: [
-        {
-          address: "sdfsdfsdf",
-          number: 123123,
-          number_u: 123,
-          id: "234234sfddf",
-          status: 1,
-          created_at: "2012-12-12 00:00:00",
-        },
-      ],
+      logsData: [],
     };
   },
 

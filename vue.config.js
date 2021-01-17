@@ -1,6 +1,6 @@
 const path = require('path')
 module.exports = {
-  publicPath: '/',
+  publicPath: './',
   outputDir: 'ent',
   devServer: {
     host: '0.0.0.0',
