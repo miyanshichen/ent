@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "2569874",
+      "name": "退出",
+      "font_class": "tuichu",
+      "unicode": "e67d",
+      "unicode_decimal": 59005
+    },
+    {
       "icon_id": "19009906",
       "name": "转换-transformation",
       "font_class": "zhuanhuan-transformation",

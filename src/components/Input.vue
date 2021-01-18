@@ -99,6 +99,11 @@ export default {
         }
       }
     }
+  },
+  watch: {
+    // value (newVal, oldVal) {
+    //   console.log(newVal, oldVal)
+    // }
   }
 }
 

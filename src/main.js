@@ -9,6 +9,7 @@ import 'element-ui/lib/theme-chalk/display.css';
 import './plugins/element.js'
 import public_component from './components/index.js'
 import axios from './plugins/axios'
+import i18n from './plugins/i18n'
 
 Vue.config.productionTip = false
 Vue.use(public_component)
@@ -29,8 +30,12 @@ router.beforeEach((to, from, next) => {
   }
 })
 
+console.log(localStorage.getItem('lang'))
+i18n.locale = localStorage.getItem('lang') || 'zh-cn';
+
 new Vue({
   router,
   store,
+  i18n,
   render: h => h(App)
 }).$mount('#app')

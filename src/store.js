@@ -9,7 +9,8 @@ export default new Vuex.Store({
     https: Http[process.env.NODE_ENV],
     userInfo: localStorage.getItem('userInfo') ? JSON.parse(localStorage.getItem('userInfo')) : '',
     second_password: localStorage.getItem('second_password') ? localStorage.getItem('second_password') : '',
-    token: localStorage.getItem('token') ? localStorage.getItem('token') : ''
+    token: localStorage.getItem('token') ? localStorage.getItem('token') : '',
+    lang: localStorage.getItem('lang') ? localStorage.getItem('lang') : 'zh-cn'
   },
   mutations: {
     SET_USERINFO(state, info) {
@@ -27,6 +28,10 @@ export default new Vuex.Store({
       state.userInfo = "";
       state.second_password = "";
       state.token = "";
+    },
+    SET_LANG(state, lang) {
+      localStorage.setItem('lang', lang)
+      state.lang = lang;
     }
   },
   actions: {
