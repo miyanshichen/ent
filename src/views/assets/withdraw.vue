@@ -81,7 +81,7 @@ export default {
     return {
       withdrawForm: {
         address: "",
-        coin_id: "1",
+        coin_id: "3",
         number: "",
         second_password: "",
         label: ""
@@ -126,7 +126,7 @@ export default {
     async getLogs() {
       await this.$axios
         .get(
-          this.$https.api + "/coin/record?type=2&page=1&page_size=10&coin_id=1"
+          this.$https.api + "/coin/record?type=2&page=1&page_size=10&coin_id=3"
         )
         .then((res) => {
           if (res.status === 1) {
