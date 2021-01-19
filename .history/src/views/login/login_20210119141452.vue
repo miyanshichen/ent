@@ -60,7 +60,6 @@ export default {
     }),
 
     login() {
-      this.$router.push('/home');
       // this.$refs.loginForm.validate(async valid => {
       //   if (valid) {
       //     if (this.loginSwitch) {
