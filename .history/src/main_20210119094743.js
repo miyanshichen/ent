@@ -30,6 +30,7 @@ router.beforeEach((to, from, next) => {
   }
 })
 
+console.log(localStorage.getItem('lang'))
 i18n.locale = localStorage.getItem('lang') || 'zh-cn';
 
 new Vue({
