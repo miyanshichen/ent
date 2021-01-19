@@ -64,7 +64,7 @@ export default {
         if (valid) {
           if (this.loginSwitch) {
             this.loginSwitch = false;
-            await this.$axios.post('https//ec2-18-232-188-25.compute-1.amazonaws.com:8112/api/signIn', this.loginForm).then(res => {
+            await this.$axios.post(this.$https.api + '/signIn', this.loginForm).then(res => {
               this.loginSwitch = true;
               if (res.status === 1) {
                 this.SET_USERINFO(res.data);
