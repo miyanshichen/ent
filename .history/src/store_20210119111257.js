@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 import Http from './plugins/https'
 
 Vue.use(Vuex)
-console.log(123123, Http[process.env.NODE_ENV])
+console.log(Http[process.env.NODE_ENV])
 export default new Vuex.Store({
   state: {
     https: Http[process.env.NODE_ENV],
